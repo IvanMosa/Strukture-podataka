@@ -4,11 +4,11 @@
 #define MAX_SIZE (50)
 #define MAX_LINE (1024)
 
-typedef struct{
+typedef struct _student {
 	char name[MAX_SIZE];
 	char surname[MAX_SIZE];
 	double points;
-}_student;
+}Student;
 
 
 int main()
@@ -16,7 +16,7 @@ int main()
 	int noRows = 0;
 	FILE* filePtr = NULL;
 	char buffer[MAX_LINE] = { 0 };
-	_student* s;
+	Student* s = NULL;
 
 	filePtr = fopen("students.txt", "r");
 	if (!filePtr)
@@ -31,7 +31,7 @@ int main()
 	}
 	rewind(filePtr);
 	
-	s = malloc(sizeof(_student) * noRows);
+	s = (Student *)malloc(sizeof(Student) * noRows);
 
 	for (int i = 0; i < noRows; i++)
 	{
@@ -40,7 +40,7 @@ int main()
 	
 	for (int i = 0; i < noRows; i++)
 	{
-		printf("%s %s %lf %lf\n", s[i].name, s[i].surname, s[i].points/100, s[i].points/(100*100));
+		printf("%s %s %lf %lf\n", s[i].name, s[i].surname, s[i].points, s[i].points/100*100);
 	}
 	fclose(filePtr);
 	return 0;
