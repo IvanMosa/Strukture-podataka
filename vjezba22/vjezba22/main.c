@@ -26,6 +26,7 @@ int deletePerson(Position Head);
 int printListInDoc(Position Head);
 Position findPrevious(Position Head);
 int addPersonAfter(Position previous);
+int printListFromDoc(Position Head);
 
 int main(void) {
     
@@ -88,6 +89,10 @@ int main(void) {
             case 'h':
                 printListInDoc(Head.next);
                 continue;
+            /*
+            case 'I':
+            case 'i':
+                printListFromDoc(&Head);*/
             case 'X':
             case 'x':
                 printf("Exiting...\n");
@@ -315,5 +320,3 @@ int addPersonAfter(Position previous)
     }
     return EXIT_SUCCESS;
 }
-
-
