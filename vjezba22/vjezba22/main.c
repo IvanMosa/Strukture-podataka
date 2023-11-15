@@ -89,10 +89,11 @@ int main(void) {
             case 'h':
                 printListInDoc(Head.next);
                 continue;
-            /*
+            
             case 'I':
             case 'i':
-                printListFromDoc(&Head);*/
+                printListFromDoc(Head.next);
+                continue;
             case 'X':
             case 'x':
                 printf("Exiting...\n");
@@ -317,6 +318,38 @@ int addPersonAfter(Position previous)
     {
         newPerson->next=previous->next;
         previous->next=newPerson;
+    }
+    return EXIT_SUCCESS;
+}
+
+int printListFromDoc(Position Head)
+{
+    FILE* filePtr=NULL;
+    
+    filePtr=fopen("/Users/Mosa21/programiranje/Strukture-podataka/vjezba22/vjezba22/list.txt", "r");
+    if(!filePtr)
+    {
+        printf("Failed to open file\n");
+        return EXIT_FAILURE;
+    }
+    
+    if(Head)
+    {
+        while(!feof(filePtr))
+        {
+            char name[MAX_LENGHT] = {0};
+            char surname[MAX_LENGHT] = {0};
+            int birthYear = 0;
+            
+            fscanf(filePtr, "%s %s %d\n", name, surname, &birthYear);
+            printf("%s %s %d\n", name , surname, birthYear);
+        }
+        fclose(filePtr);
+    }
+    else
+    {
+        fclose(filePtr);
+        return EMPTY_LIST;
     }
     return EXIT_SUCCESS;
 }
