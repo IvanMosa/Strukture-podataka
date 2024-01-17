@@ -44,7 +44,7 @@ int insertReceiptAfter(ReceiptPosition receiptCurrent, ReceiptPosition newReceip
 int compareDates(char* date1, char* date2);
 int articleInBetweenDates(char* articleName, char* dateFrom, char* dateTo, ReceiptPosition receiptHead);
 
-int main(void) {
+int main() {
     Receipt receiptHead = {
         .receiptDate = { 0 },
         .next = NULL,
