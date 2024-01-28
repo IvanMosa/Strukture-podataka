@@ -1,0 +1,5 @@
+Hrvatska /Users/mosa21/programiranje/Strukture-podataka/vjezba10_11/vjezba10_11/hrvatska.txt
+Belgija /Users/mosa21/programiranje/Strukture-podataka/vjezba10_11/vjezba10_11/belgija.txt
+Njemacka /Users/mosa21/programiranje/Strukture-podataka/vjezba10_11/vjezba10_11/njemacka.txt
+Austrija /Users/mosa21/programiranje/Strukture-podataka/vjezba10_11/vjezba10_11/austrija.txt
+Italija /Users/mosa21/programiranje/Strukture-podataka/vjezba10_11/vjezba10_11/italija.txt

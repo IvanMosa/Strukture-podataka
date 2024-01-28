@@ -41,20 +41,17 @@ int main(void)
     insert(root, 7);
     
     levelOrder(root);
+    printf("\n");
+    inOrder(root);
     
-    /*replace(root);
+    replace(root);
     
     printf("\n");
-    levelOrder(root);*/
+    levelOrder(root);
     
     printf("\n");
     inOrder(root);
     
-    printf("\n");
-    preOrder(root);
-    
-    printf("\n");
-    postOrder(root);
     
     randomRoot = insert(randomRoot, random1());
     for(int i = 0; i<10;i++){
